@@ -3,12 +3,16 @@ Safe Recipes - Step 1: Deploy a plain docker container on AWS
 
 ### Clone repo
 $ git clone git@github.com:philskaroulis/sf.rcp.aws-docker.git
+
 $ cd sf.rcp.aws-docker
+
 $ npm install
 
 ### Build docker image
 $ docker build -t sf.rcp.aws-docker .
+
 $ docker images --filter reference=sf.rcp.aws-docker
+
 $ docker run -p 80:8080 sf.rcp.aws-docker
 
 ### Create an AWS ECR repo
@@ -60,10 +64,15 @@ $ aws ecr list-images --repository-name sf.rcp.aws-docker
 4. $ ssh -i ~/.ssh/sfrcp.pem aws-user@aws_public_dns
 
 ### Prepare instance
+
 $ sudo yum update -y
+
 $ sudo yum install -y docker
+
 $ sudo usermod -aG docker aws-user
+
 $ sudo service docker start
+
 $ sudo docker --version
 
 ### Configure AWS cli

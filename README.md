@@ -15,6 +15,11 @@ $ docker images --filter reference=sf.rcp.aws-docker
 
 $ docker run -p 80:8080 sf.rcp.aws-docker
 
+### Test access from the browser
+
+http://localhost/
+
+
 ### Create an AWS ECR repo
 
 $ export AWS_PROFILE=_aws_profile_

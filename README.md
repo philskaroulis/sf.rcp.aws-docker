@@ -43,7 +43,7 @@ $ aws ecr create-repository --repository-name sf.rcp.aws-docker
 
 $ docker tag sf.rcp.aws-docker aws_account_id.dkr.ecr.us-east-1.amazonaws.com/sf.rcp.aws-docker
 
-$(aws ecr get-login --no-include-email);
+$ $(aws ecr get-login --no-include-email);
 
 $ docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/sf.rcp.aws-docker
 
